@@ -1,4 +1,4 @@
-FROM atlassian-base:latest
+FROM jleight/atlassian-base:latest
 MAINTAINER Jonathon Leight <jonathon.leight@jleight.com>
 
 USER root:root
