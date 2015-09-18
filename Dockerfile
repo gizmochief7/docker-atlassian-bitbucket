@@ -11,7 +11,7 @@ RUN set -x \
     /var/tmp/*
 USER "${ATL_USER}":"${ATL_USER}"
 
-ENV APP_VERSION 3.10.0
+ENV APP_VERSION 3.11.3
 ENV APP_BASEURL ${ATL_BASEURL}/stash/downloads/binary
 ENV APP_PACKAGE atlassian-stash-${APP_VERSION}.tar.gz
 ENV APP_URL     ${APP_BASEURL}/${APP_PACKAGE}
