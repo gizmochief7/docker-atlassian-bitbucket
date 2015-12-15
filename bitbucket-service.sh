@@ -2,8 +2,8 @@
 
 SERVER_XML="${ATL_HOME}/conf/server.xml"
 
-# Set STASH_HOME for stash.
-export STASH_HOME="${ATL_DATA}"
+# Set BITBUCKET_HOME for bitbucket.
+export BITBUCKET_HOME="${ATL_DATA}"
 
 # Remove any previous proxy configuration.
 sed -E 's/ proxyName="[^"]*"//g' -i "${SERVER_XML}"
