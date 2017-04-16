@@ -13,7 +13,7 @@ forwarding rule and run the container:
 
     $ docker run \
         -p 7990:7990 \
-        jleight/atlassian-bitbucket
+        gizmochief7/atlassian-bitbucket
 
 Atlassian Bitbucket® also exposes SSH access for git operations on port 7999. If you
 want to allow git SSH operations, you'll also need to expose port 7999:
@@ -21,7 +21,7 @@ want to allow git SSH operations, you'll also need to expose port 7999:
     $ docker run \
         -p 7990:7990 \
         -p 7999:7999 \
-        jleight/atlassian-bitbucket
+        gizmochief7/atlassian-bitbucket
 
 Usage
 -----
@@ -47,7 +47,7 @@ A data container can be created by running the following command:
 
     $ docker create \
         --name bitbucket-data \
-        jleight/atlassian-bitbucket
+        gizmochief7/atlassian-bitbucket
 
 The application container can then be started by running:
 
@@ -56,7 +56,7 @@ The application container can then be started by running:
         --volumes-from bitbucket-data \
         -p 7990:7990 \
         -p 7999:7999 \
-        jleight/atlassian-bitbucket
+        gizmochief7/atlassian-bitbucket
 
 ### Context Root
 
@@ -73,7 +73,7 @@ It can be specified in the `docker run` command like this:
         -p 7990:7990 \
         -p 7999:7999 \
         -e TC_ROOTPATH=/bitbucket \
-        jleight/atlassian-bitbucket
+        gizmochief7/atlassian-bitbucket
 
 Atlassian Bitbucket® can then be accessed at http://${HOST_IP}:7990/bitbucket.
 
@@ -99,7 +99,7 @@ https://example.com/bitbucket, you would use the following command:
         -e TC_PROXYNAME=example.com \
         -e TC_PROXYPORT=443 \
         -e TC_ROOTPATH=/bitbucket \
-        jleight/atlassian-bitbucket
+        gizmochief7/atlassian-bitbucket
 
 Once your proxy server is configured, Atlassian Bitbucket® should be accessible
 at https://example.com/bitbucket.

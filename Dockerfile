@@ -1,5 +1,5 @@
-FROM jleight/atlassian-base:latest
-MAINTAINER Jonathon Leight <jonathon.leight@jleight.com>
+FROM gizmochief7/atlassian-base:latest
+MAINTAINER Justin Ayers <gizmochief7@gmail.com>
 
 USER root:root
 RUN set -x \
@@ -11,7 +11,7 @@ RUN set -x \
     /var/tmp/*
 USER "${ATL_USER}":"${ATL_USER}"
 
-ENV APP_VERSION 4.2.0
+ENV APP_VERSION 4.14
 ENV APP_BASEURL ${ATL_BASEURL}/stash/downloads/binary
 ENV APP_PACKAGE atlassian-bitbucket-${APP_VERSION}.tar.gz
 ENV APP_URL     ${APP_BASEURL}/${APP_PACKAGE}
